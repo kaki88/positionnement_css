@@ -1,0 +1,50 @@
+.tout { 
+  text-align: center;
+}  
+
+.cadre {
+         width: 500px;
+        height: 250px;
+        background-color: #525659;
+        padding: 50px;
+        margin:50px;
+        display:inline-block;
+        border: 1px solid black;
+        border-radius: 30px;
+     overflow: hidden;
+
+}
+
+.inta {
+        width: 200px;
+        height: 250px;
+        background-color: #D8D8D8;
+      display:inline-block;
+      margin-right: 50px;
+      border: 1px solid black;
+        border-radius: 10px;
+        font-size: 200px;
+}
+
+.intb {
+        width: 200px;
+        height: 250px;
+        background-color: #D8D8D8;
+  display:inline-block;
+  border: 1px solid black;
+        border-radius: 10px;
+        font-size: 200px;
+}
+
+.centre {
+        text-align: center;
+}
+
+.lignea {
+        text-align: center;
+}
+
+.ligneb {
+        text-align: center;
+        margin-top: -92px;
+}
