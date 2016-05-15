@@ -1,122 +1,252 @@
-
 <!doctype html>
 <html lang='fr'>
+
 <head>
-   <meta charset='utf-8'>
-   <link rel="stylesheet" href="styles.css">
-   <title>test</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="styles.css">
+    <script src='js/jquery.min.js'></script>
+    <title>Simplon</title>
 </head>
+
 <body>
 
-<div class="tout">
-      <div class="blocka">
-<div class="lignea">
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
+    <div class="tout">
+        <div class="blocka">
+            <div class="lignea">
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-1"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-2"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-3"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-4"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ligneb">
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-5"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-6"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-7"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-8"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blockb">
+            <div class="lignea">
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-9"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-10"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-11"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-12"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ligneb">
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-13"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-14"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-15"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-16"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blockc">
+            <div class="lignea">
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-17"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-18"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-19"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-20"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ligneb">
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-21"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-22"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+                <div class="cadre">
+                    <div class="centre">
+                        <div class="inta" id="photo-23"><img class="ph" src="img/back.gif"></div>
+                        <div class="intb" id="photo-0"><img class="ph" src="img/back.gif"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
+    <div class="menu">
+        <button class="menu-bt" id="placer" onclick="setTimeout('placer()', 1000),setTimeout('nom()', 1000);">PLACER</button>
+        <br />
+        <button class="menu-bt" id="annuler" onclick='annuler()'>REINITIALISER</button>
     </div>
-</div>
-</div>
+    <script>
+        function shuffle(a) {
+            var j, x, i;
+            for (i = a.length; i; i -= 1) {
+                j = Math.floor(Math.random() * i);
+                x = a[i - 1];
+                a[i - 1] = a[j];
+                a[j] = x;
+            }
+        }
+        var listes = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '0'];
+        var simplonniens = {
+            0: {
+                nom: 'Marchal Thibault',
+                age: '23 ans'
+            },
+            1: {
+                nom: 'Dupoirieux Yoann',
+                age: '29 ans'
+            },
+            2: {
+                nom: 'Hel Nicolas',
+                age: '31 ans'
+            },
+            3: {
+                nom: 'Dassigny Kevin',
+                age: '24 ans'
+            },
+            4: {
+                nom: 'Maignan Dylan',
+                age: '19 ans'
+            },
+            5: {
+                nom: 'Prevot Gwenael',
+                age: '24 ans'
+            },
+            6: {
+                nom: 'Toussaint Audrey',
+                age: '22 ans'
+            },
+            7: {
+                nom: 'Nazimek Alexis',
+                age: '23 ans'
+            },
+            8: {
+                nom: 'Mehlinger Fabien',
+                age: '19 ans'
+            },
+            9: {
+                nom: 'Fetet Kevin',
+                age: '25 ans'
+            },
+            10: {
+                nom: 'Warnet Lucas',
+                age: '21 ans'
+            },
+            11: {
+                nom: 'Bertrand Etienne',
+                age: '26 ans'
+            },
+            12: {
+                nom: 'Fleurentin Jennifer',
+                age: '23 ans'
+            },
+            13: {
+                nom: 'Maillard Florent',
+                age: '30 ans'
+            },
+            14: {
+                nom: 'Richard Meddy',
+                age: '21 ans'
+            },
+            15: {
+                nom: 'Najai Kaouthar',
+                age: '24 ans'
+            },
+            16: {
+                nom: 'Perrin Olivier',
+                age: '32 ans'
+            },
+            17: {
+                nom: 'Chouieb Mehdy',
+                age: '19 ans'
+            },
+            18: {
+                nom: 'Creus Virginie',
+                age: '29 ans'
+            },
+            19: {
+                nom: 'Filali Dalia',
+                age: '21 ans'
+            },
+            20: {
+                nom: 'Bouroub Djamel',
+                age: '26 ans'
+            },
+            21: {
+                nom: 'Cardoso Christopher',
+                age: '19 ans'
+            },
+            22: {
+                nom: 'Mouraret Steve',
+                age: '22 ans'
+            },
+            23: {
+                nom: 'Chudant Chloé',
+                age: '24 ans'
+            }
+        };
 
-<div class="ligneb">
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
+        function nom() {
+            for (var i = 0; i < 24; i++) {
+                document.getElementById("nom-" + i + "").innerHTML = simplonniens["" + i + ""]["nom"];
+                document.getElementById("age-" + i + "").innerHTML = simplonniens["" + i + ""]["age"];
+            }
+        }
 
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-</div>
-      </div>
+        function placer() {
+            shuffle(listes);
+            for (var i = 0; i < 24; i++) {
+                document.getElementById("photo-" + listes[i] + "").innerHTML = '<div  class="ih-item square colored effect4"><a href="#"><div class="img"><img id="phi" class="ph" src="photos-apprenants/' + i + '.jpg" /><div class="mask1"></div><div class="mask2"></div><div class="info"><h3 id="nom-' + i + '"></h3><p id="age-' + i + '"></p></div></a></div><img src="img/back.gif">';
+            }
+        }
 
-
-
-      <div class="blockb">
-<div class="lignea">
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-</div>
-
-<div class="ligneb">
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-</div>
-      </div>
-
-
-            <div class="blockc">
-<div class="lignea">
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-</div>
-
-<div class="ligneb">
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-
-<div class="cadre">
-	<div class="centre">
-      <div class="inta">?</div>
-      <div class="intb">?</div>
-    </div>
-</div>
-</div>
-      </div>
-  </div>
-    
-
-
-
+        function annuler() {
+            for (var i = 0; i < 24; i++) {
+                document.getElementById("phi").remove();
+            }
+        }
+    </script>
+    <script>
+        $('#placer').click(function () {
+            $('.inta').toggleClass('transform');
+            $('.intb').toggleClass('transformb');
+            setTimeout(function () {
+                $('.inta').removeClass('transform');
+                $('.intb').removeClass('transformb');
+            }, 2500);
+        });
+    </script>
 </body>
 <html>
