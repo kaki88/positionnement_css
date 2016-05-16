@@ -5,39 +5,39 @@
     <meta charset='utf-8'>
     <link rel="stylesheet" href="styles.css">
     <script src='js/jquery.min.js'></script>
+    <script src="js/jquery-ui.min.js"></script>
     <title>Simplon</title>
 </head>
 
 <body>
-
     <div class="tout">
         <div class="blocka">
             <div class="lignea">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-1"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-2"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-1"></div>
+                        <div class="intb" id="photo-2"></div>
                     </div>
                 </div>
 
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-3"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-4"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-3"></div>
+                        <div class="intb" id="photo-4"></div>
                     </div>
                 </div>
             </div>
             <div class="ligneb">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-5"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-6"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-5"></div>
+                        <div class="intb" id="photo-6"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-7"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-8"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-7"></div>
+                        <div class="intb" id="photo-8"></div>
                     </div>
                 </div>
             </div>
@@ -46,28 +46,28 @@
             <div class="lignea">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-9"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-10"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-9"></div>
+                        <div class="intb" id="photo-10"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-11"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-12"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-11"></div>
+                        <div class="intb" id="photo-12"></div>
                     </div>
                 </div>
             </div>
             <div class="ligneb">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-13"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-14"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-13"></div>
+                        <div class="intb" id="photo-14"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-15"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-16"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-15"></div>
+                        <div class="intb" id="photo-16"></div>
                     </div>
                 </div>
             </div>
@@ -76,37 +76,43 @@
             <div class="lignea">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-17"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-18"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-17"></div>
+                        <div class="intb" id="photo-18"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-19"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-20"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-19"></div>
+                        <div class="intb" id="photo-20"></div>
                     </div>
                 </div>
             </div>
             <div class="ligneb">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-21"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-22"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-21"></div>
+                        <div class="intb" id="photo-22"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-23"><img class="ph" src="img/back.gif"></div>
-                        <div class="intb" id="photo-0"><img class="ph" src="img/back.gif"></div>
+                        <div class="inta" id="photo-23"></div>
+                        <div class="intb" id="photo-0"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="menu">
-        <button class="menu-bt" id="placer" onclick="setTimeout('placer()', 1000),setTimeout('nom()', 1000);">PLACER</button>
+    <div class="menu" id="menu">
+        <button class="menu-bt" id="placer" onclick="setTimeout('placer()', 1000),setTimeout('nom()', 2000);">PLACER</button>
         <br />
-        <button class="menu-bt" id="annuler" onclick='annuler()'>REINITIALISER</button>
+        <button class="menu-bt" id="decouvrir" onclick="setTimeout('decouvrir()', 10);">DECOUVRIR</button>
+        <br />
+        <button class="menu-bt" id="cacher" onclick="setTimeout('cacher()', 10);">CACHER</button>
+        <br />
+        <button class="menu-bt marge-bt" id="annuler" onclick='annuler()'>REINITIALISER</button>
+        <div class="recepteur" id="recepteur">
+        </div>
     </div>
     <script>
         function shuffle(a) {
@@ -217,6 +223,9 @@
                 age: '24 ans'
             }
         };
+        for (var i = 0; i < 24; i++) {
+            document.getElementById("menu").innerHTML += "<div class='flip-container abs' id='paquet-" + i + "' ontouchstart='this.classList.toggle('hover');'><div class='flipper' id='flipper" + i + "'><div class='front'><img class='ph abs' src='img/back.gif'></div><div class='back' id='photob-" + i + "'></div></div></div>";
+        }
 
         function nom() {
             for (var i = 0; i < 24; i++) {
@@ -228,23 +237,62 @@
         function placer() {
             shuffle(listes);
             for (var i = 0; i < 24; i++) {
-                document.getElementById("photo-" + listes[i] + "").innerHTML = '<div  class="ih-item square colored effect4"><a href="#"><div class="img"><img id="phi" class="ph" src="photos-apprenants/' + i + '.jpg" /><div class="mask1"></div><div class="mask2"></div><div class="info"><h3 id="nom-' + i + '"></h3><p id="age-' + i + '"></p></div></a></div><img src="img/back.gif">';
+                document.getElementById("photob-" + listes[i] + "").innerHTML = '<div id="phi" class="ih-item square colored effect4"><a href="#"><div class="img"><img  class="ph" src="photos-apprenants/' + i + '.jpg" /><div class="mask1"></div><div class="mask2"></div><div class="info"><h3 id="nom-' + i + '"></h3><p id="age-' + i + '"></p></div></a></div>';
             }
         }
 
         function annuler() {
             for (var i = 0; i < 24; i++) {
-                document.getElementById("phi").remove();
+                $('#paquet-' + i + '').effect('transfer', {
+                    to: $('#recepteur')
+                }, 3000);
+                $(".abs").css("position", "absolute"), 650;
+                $('#paquet-' + i + '').prependTo('#recepteur').hide().fadeIn('slow');
             }
         }
-    </script>
-    <script>
         $('#placer').click(function () {
+            for (var i = 0; i < 24; i++) {
+                $('#paquet-' + i + '').effect('transfer', {
+                    to: $('#photo-' + i + '')
+                }, 2000);
+            }
+            setTimeout(function () {
+                for (var i = 0; i < 24; i++) {
+                    $('#paquet-' + i + '').prependTo('#photo-' + i + '').hide().fadeIn('slow');
+                }
+                $(".abs").css("position", "relative");
+            }, 250);
+        });
+
+        $('#decouvrir').click(function () {
             $('.inta').toggleClass('transform');
             $('.intb').toggleClass('transformb');
             setTimeout(function () {
+                $(".front").css("transform", "rotateY(180deg)");
+                $(".back").css("transform", "rotateY(0deg)");
+            }, 1000);
+            setTimeout(function () {
                 $('.inta').removeClass('transform');
                 $('.intb').removeClass('transformb');
+                for (var i = 0; i < 24; i++) {
+                    $("#flipper" + i + "").removeClass("flipper");
+                }
+            }, 2500);
+        });
+
+        $('#cacher').click(function () {
+            $('.inta').toggleClass('transform');
+            $('.intb').toggleClass('transformb');
+            setTimeout(function () {
+                $(".front").css("transform", "rotateY(0deg)");
+                $(".back").css("transform", "rotateY(180deg)");
+            }, 1000);
+            setTimeout(function () {
+                $('.inta').addClass('transform');
+                $('.intb').addClass('transformb');
+                for (var i = 0; i < 24; i++) {
+                    $("#flipper" + i + "").addClass("flipper");
+                }
             }, 2500);
         });
     </script>

@@ -5,27 +5,86 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+.recepteur{
+    border: 2px solid black;
+    background-image: url(img/vide.png);
+    background-size: 182px 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 180px;
+        height: 250px;
+    position: absolute;
+}
+.flip-container {
+	perspective: 1000;
+}
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(540deg);
+	}
 
+.flip-container, .front, .back {
+	width: 180px;
+        height: 250px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+.abs {
+    position: absolute;
+}
 .tout { 
   text-align: center;
  -webkit-animation: zoomInRight 4s ease-out 1;
     animation: zoomInRight 4s ease-out 1;
 }  
+.ui-effects-transfer {
+    border: 2px solid black;
+    background-image: url(img/back.gif);
+    background-size: 182px 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
 
 .menu {
     float: right;
     position: fixed;
     top: 30px;
     left:0px;
-    padding: 30px;
+    padding: 30px 10px 30px 10px;
     background-color: #2B919B;
     border-right: 2px solid #6A6262;
      border-top: 2px solid #6A6262;
      border-bottom: 2px solid #6A6262;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
+    height: 500px;
 }
 
+.marge-bt {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
 .menu-bt {
 	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
@@ -51,7 +110,7 @@ body {
 	padding:11px 23px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
-    width: 170px;
+    width: 182px;
 }
 .menu-bt:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
@@ -86,7 +145,7 @@ body {
 .inta {
         width: 180px;
         height: 250px;
-        background-color:  black;
+       
       display:inline-block;
       margin-right: 50px;
         border-radius: 2px;
@@ -110,7 +169,6 @@ body {
 .intb {
         width: 180px;
         height: 250px;
-        background-color:  black;
   display:inline-block;
         border-radius: 2px;
         font-size: 200px;
@@ -134,9 +192,9 @@ body {
 
 
 
-.ph{
+.ph, .front{
     width: 182px;
-    height: 260px!important;
+    height: 250px!important;
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -160,8 +218,8 @@ body {
   text-decoration: none;
 }
 .ih-item img {
-  width: 100%;
-  height: 100%;
+  	width: 184px;
+        height: 250px;
 }
 .ih-item.square {
   position: relative;
