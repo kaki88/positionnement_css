@@ -18,10 +18,10 @@ body {
 .flip-container {
 	perspective: 1000;
 }
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(540deg);
-	}
 
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(1980deg);
+}
 .flip-container, .front, .back {
 	width: 180px;
         height: 250px;

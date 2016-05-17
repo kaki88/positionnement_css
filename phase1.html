@@ -15,29 +15,29 @@
             <div class="lignea">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-1"></div>
-                        <div class="intb" id="photo-2"></div>
+                        <div class="inta" id="photo-0"></div>
+                        <div class="intb" id="photo-1"></div>
                     </div>
                 </div>
 
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-3"></div>
-                        <div class="intb" id="photo-4"></div>
+                        <div class="inta" id="photo-4"></div>
+                        <div class="intb" id="photo-5"></div>
                     </div>
                 </div>
             </div>
             <div class="ligneb">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-5"></div>
-                        <div class="intb" id="photo-6"></div>
+                        <div class="inta" id="photo-2"></div>
+                        <div class="intb" id="photo-3"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-7"></div>
-                        <div class="intb" id="photo-8"></div>
+                        <div class="inta" id="photo-6"></div>
+                        <div class="intb" id="photo-7"></div>
                     </div>
                 </div>
             </div>
@@ -46,28 +46,28 @@
             <div class="lignea">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-9"></div>
-                        <div class="intb" id="photo-10"></div>
+                        <div class="inta" id="photo-8"></div>
+                        <div class="intb" id="photo-9"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-11"></div>
-                        <div class="intb" id="photo-12"></div>
+                        <div class="inta" id="photo-12"></div>
+                        <div class="intb" id="photo-13"></div>
                     </div>
                 </div>
             </div>
             <div class="ligneb">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-13"></div>
-                        <div class="intb" id="photo-14"></div>
+                        <div class="inta" id="photo-10"></div>
+                        <div class="intb" id="photo-11"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-15"></div>
-                        <div class="intb" id="photo-16"></div>
+                        <div class="inta" id="photo-14"></div>
+                        <div class="intb" id="photo-15"></div>
                     </div>
                 </div>
             </div>
@@ -76,28 +76,28 @@
             <div class="lignea">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-17"></div>
-                        <div class="intb" id="photo-18"></div>
+                        <div class="inta" id="photo-16"></div>
+                        <div class="intb" id="photo-17"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-19"></div>
-                        <div class="intb" id="photo-20"></div>
+                        <div class="inta" id="photo-20"></div>
+                        <div class="intb" id="photo-21"></div>
                     </div>
                 </div>
             </div>
             <div class="ligneb">
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-21"></div>
-                        <div class="intb" id="photo-22"></div>
+                        <div class="inta" id="photo-18"></div>
+                        <div class="intb" id="photo-19"></div>
                     </div>
                 </div>
                 <div class="cadre">
                     <div class="centre">
-                        <div class="inta" id="photo-23"></div>
-                        <div class="intb" id="photo-0"></div>
+                        <div class="inta" id="photo-22"></div>
+                        <div class="intb" id="photo-23"></div>
                     </div>
                 </div>
             </div>
@@ -107,8 +107,6 @@
         <button class="menu-bt" id="placer" onclick="setTimeout('placer()', 1000),setTimeout('nom()', 2000);">PLACER</button>
         <br />
         <button class="menu-bt" id="decouvrir" onclick="setTimeout('decouvrir()', 10);">DECOUVRIR</button>
-        <br />
-        <button class="menu-bt" id="cacher" onclick="setTimeout('cacher()', 10);">CACHER</button>
         <br />
         <button class="menu-bt marge-bt" id="annuler" onclick='annuler()'>REINITIALISER</button>
         <div class="recepteur" id="recepteur">
@@ -264,36 +262,24 @@
             }, 250);
         });
 
-        $('#decouvrir').click(function () {
-            $('.inta').toggleClass('transform');
-            $('.intb').toggleClass('transformb');
-            setTimeout(function () {
-                $(".front").css("transform", "rotateY(180deg)");
-                $(".back").css("transform", "rotateY(0deg)");
-            }, 1000);
-            setTimeout(function () {
-                $('.inta').removeClass('transform');
-                $('.intb').removeClass('transformb');
-                for (var i = 0; i < 24; i++) {
-                    $("#flipper" + i + "").removeClass("flipper");
-                }
-            }, 2500);
-        });
 
-        $('#cacher').click(function () {
-            $('.inta').toggleClass('transform');
-            $('.intb').toggleClass('transformb');
-            setTimeout(function () {
-                $(".front").css("transform", "rotateY(0deg)");
-                $(".back").css("transform", "rotateY(180deg)");
-            }, 1000);
-            setTimeout(function () {
-                $('.inta').addClass('transform');
-                $('.intb').addClass('transformb');
-                for (var i = 0; i < 24; i++) {
-                    $("#flipper" + i + "").addClass("flipper");
-                }
-            }, 2500);
+
+
+        function decouvrir() {
+            for (i = 0; i <= 24; i++) {
+                (function (i) {
+                    setTimeout(function () {
+                        document.querySelector("#paquet-" + i + "").classList.toggle("flip");
+
+                    }, 400 * i);
+                }(i));
+            }
+        }
+        
+        $("#decouvrir").click(function () {
+       $(this).text(function(i, v){
+               return v === 'DECOUVRIR' ? 'CACHER' : 'DECOUVRIR'
+            })
         });
     </script>
 </body>
